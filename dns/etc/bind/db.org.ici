@@ -1,0 +1,11 @@
+$TTL    60000
+@               IN      SOA     dns.ici.pt.    root.dns.ici.pt. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@               	IN      NS      dns.ici.pt.
+dns             	IN      A       10.20.64.35
+server_bd		IN	A	10.20.64.65
