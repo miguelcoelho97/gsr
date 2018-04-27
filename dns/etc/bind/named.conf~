@@ -21,9 +21,9 @@ options {
         //      0.0.0.0;
         // };
 
-	min-roots 1;
-
+	
 	allow-query     { any; };
+	recursion yes;
 	};
 
 	// reduce log verbosity on issues outside our control
@@ -44,25 +44,11 @@ zone "localhost" {
 	file "/etc/bind/db.local";
 	};
 
-zone "127.in-addr.arpa" {
-        type master;
-        file "/etc/bind/db.127";
-};
-
-zone "0.in-addr.arpa" {
-	type master;
-	file "/etc/bind/db.0";
-};
-
-zone "255.in-addr.arpa" {
-        type master;
-        file "/etc/bind/db.255";
-};
 
 // add entries for other zones below here
 
-zone "lugroma3.org" {
+zone "ici.pt" {
         type master;
-        file "/etc/bind/db.org.lugroma3";
+        file "/etc/bind/db.pt.ici";
 };
 
