@@ -1,8 +1,8 @@
 machines="dns dns_pt dns_root router_internet pc_internet router_central switch_scada switch_sube1 switch_sube2 switch_servicos www switch_corporate switch_datahistorian router_sube1 router_sube2 router_scada  pc_engenheiro pc_admin_rede pc_scada pc_sube1 pc_sube2 servidor_bd"
 
-dns_root[0]="A"
+dns_root[0]="C"
 dns_pt[0]="B"
-pc_internet[0]="C"
+pc_internet[0]="A"
 router_internet[0]="A"
 router_internet[1]="B"
 router_internet[2]="C"
@@ -53,3 +53,4 @@ switch_sube2[0]="T"
 switch_sube2[1]="U"
 pc_sube2[0]="U"
 
+pc_admin_rede[1]=tap,192.168.12.1,192.168.12.2
