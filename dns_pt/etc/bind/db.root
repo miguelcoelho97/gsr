@@ -1,2 +1,2 @@
 .                   IN  NS    dns_root.
-dns_root.        IN  A     20.40.0.2
+dns_root.        IN  A     30.40.0.2

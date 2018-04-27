@@ -21,16 +21,14 @@ options {
         //      0.0.0.0;
         // };
 
-	min-roots 1;
+	
 
 	allow-query     { any; };
-
+	recursion yes;
 	};
 
 	// reduce log verbosity on issues outside our control
-logging {
-        category lame-servers { null; };
-	};
+
 
 	// prime the server with knowledge of the root servers
 zone "." {
