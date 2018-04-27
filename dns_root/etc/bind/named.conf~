@@ -22,26 +22,20 @@ options {
         // };
 
 	allow-query     { any; };
-
+	recursion yes;
 	};
 
 	// reduce log verbosity on issues outside our control
-logging {
-        category lame-servers { null; };
-	};
+
 
 	// prime the server with knowledge of the root servers
 zone "." {
-        type master;
+        type hint;
         file "/etc/bind/db.root";
 	};
 
 	// be authoritative for the localhost forward and reverse zones, and for
 	// broadcast zones as per RFC 1912
-zone "localhost" {
-	type master;
-	file "/etc/bind/db.local";
-	};
 
 
 // add entries for other zones below here
