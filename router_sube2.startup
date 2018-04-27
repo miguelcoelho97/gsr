@@ -4,13 +4,6 @@ ip link set dev eth0 up
 ip addr add dev eth1 10.20.64.228/27
 ip link set dev eth1 up
 
-ip route add 10.20.64.0 via 10.20.64.169
-ip route add 10.20.64.32 via 10.20.64.169
-ip route add 10.20.64.64 via 10.20.64.169
-ip route add 10.20.64.96 via 10.20.64.169
-ip route add 10.20.64.128 via 10.20.64.169
-ip route add 10.20.64.192 via 10.20.64.169
-ip route add 30.40.0.0 via 10.20.64.169
-
+ip route add 0.0.0.0/0 via 10.20.64.169
 
 /etc/init.d/dhcp3-server start

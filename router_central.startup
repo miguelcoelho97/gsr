@@ -15,3 +15,5 @@ ip link set dev eth4 up
 
 #inicializar dhcp
 /etc/init.d/dhcp3-server start
+
+ip route add 0.0.0.0/0 via 10.20.64.99
