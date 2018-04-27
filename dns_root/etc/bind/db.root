@@ -1,5 +1,5 @@
 $TTL   60000
-@               IN      SOA     ROOT-SERVER.    root.ROOT-SERVER. (
+@               IN      SOA     dns_root.    root.dns_root. (
                         2006031201 ; serial
                         28800 ; refresh
                         14400 ; retry
@@ -7,8 +7,8 @@ $TTL   60000
                         0 ; negative cache ttl
                         )
 
-@               IN      NS      ROOT-SERVER.
-ROOT-SERVER.	IN	A	30.40.0.2
+@               IN      NS      dns_root.
+dns_root.	IN	A	30.40.0.2
 
 pt.		IN 	NS	dns_pt.pt.
 dns_pt.pt.	IN 	A	30.40.0.5

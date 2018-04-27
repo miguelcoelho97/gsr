@@ -8,4 +8,4 @@ $TTL    60000
                         )
 @               	IN      NS      dns.ici.pt.
 dns             	IN      A       10.20.64.35
-server_bd		IN	A	10.20.64.65
+historian		IN	A	10.20.64.65

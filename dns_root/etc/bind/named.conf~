@@ -21,6 +21,8 @@ options {
         //      0.0.0.0;
         // };
 
+	allow-query     { any; };
+
 	};
 
 	// reduce log verbosity on issues outside our control
@@ -41,10 +43,6 @@ zone "localhost" {
 	file "/etc/bind/db.local";
 	};
 
-zone "0.168.192.in-addr.arpa" {
-        type master;
-        file "/etc/bind/db.192.168.0";
-};
 
 // add entries for other zones below here
 
