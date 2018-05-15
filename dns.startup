@@ -1,0 +1,11 @@
+ip addr add dev eth0 10.20.64.35/27
+ip link set dev eth0 up
+
+ip route add 0.0.0.0/0 via 10.20.64.33
+
+/etc/init.d/bind start
+
+#inicializacao protocolo ssh
+/etc/init.d/ssh start
+
+adduser admin

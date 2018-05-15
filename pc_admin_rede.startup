@@ -1,1 +1,28 @@
 /etc/init.d/networking start
+
+
+
+/usr/bin/cfgmaker --ifref=ip --global "WorkDir: /hostlab/pc_admin_rede/var/www" private@10.20.64.3 --output /hostlab/pc_admin_rede/home/mrtgcentral.cfg
+/usr/bin/cfgmaker --ifref=ip --global "WorkDir: /hostlab/pc_admin_rede/var/www" private@10.20.64.99 --output /hostlab/pc_admin_rede/home/mrtgscada.cfg
+/usr/bin/cfgmaker --ifref=ip --global "WorkDir: /hostlab/pc_admin_rede/var/www" private@10.20.64.138 --output /hostlab/pc_admin_rede/home/mrtgsub1.cfg
+/usr/bin/cfgmaker --ifref=ip --global "WorkDir: /hostlab/pc_admin_rede/var/www" private@10.20.64.178 --output /hostlab/pc_admin_rede/home/mrtgsub2.cfg
+/usr/bin/cfgmaker --ifref=ip --global "WorkDir: /hostlab/pc_admin_rede/var/www" private@10.20.64.45 --output /hostlab/pc_admin_rede/home/mrtgwww.cfg
+
+
+env LANG=C /usr/bin/mrtg /hostlab/pc_admin_rede/home/mrtgcentral.cfg --daemon
+env LANG=C /usr/bin/mrtg /hostlab/pc_admin_rede/home/mrtgwww.cfg --daemon
+env LANG=C /usr/bin/mrtg /hostlab/pc_admin_rede/home/mrtgscada.cfg --daemon
+env LANG=C /usr/bin/mrtg /hostlab/pc_admin_rede/home/mrtgsub1.cfg --daemon
+env LANG=C /usr/bin/mrtg /hostlab/pc_admin_rede/home/mrtgsub2.cfg --daemon
+
+indexmaker --title "Router Central" --output /hostlab/pc_admin_rede/var/www/router_central/index.html /hostlab/pc_admin_rede/home/mrtgcentral.cfg
+indexmaker --title "Router Scada" --output /hostlab/pc_admin_rede/var/www/router_scada/index.html /hostlab/pc_admin_rede/home/mrtgscada.cfg
+indexmaker --title "Router Sub1" --output /hostlab/pc_admin_rede/var/www/router_sube1/index.html /hostlab/pc_admin_rede/home/mrtgsub1.cfg
+indexmaker --title "Router Sub2" --output /hostlab/pc_admin_rede/var/www/router_sube2/index.html /hostlab/pc_admin_rede/home/mrtgsub2.cfg
+indexmaker --title "Servidor www" --output /hostlab/pc_admin_rede/var/www/www/index.html /hostlab/pc_admin_rede/home/mrtgwww.cfg
+
+a2enmod userdir
+/etc/init.d/apache2 restart
+
+#inicializacao protocolo ssh
+/etc/init.d/ssh start

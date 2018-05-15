@@ -1,1 +1,4 @@
 /etc/init.d/networking start
+
+#inicializacao protocolo ssh
+/etc/init.d/ssh start

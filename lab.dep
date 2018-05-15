@@ -1,0 +1,24 @@
+pc_engenheiro pc_admin_rede : switch_corporate router_central 
+switch_corporate : router_central
+
+pc_scada : switch_scada router_central
+switch_scada : router_central
+
+pc_sube1 : router_sube1
+switch_sube1 : router_sube1
+
+pc_sube2 : router_sube2
+switch_sube2 : router_sube2
+
+dns : switch_servicos router_central
+switch_servicos : router_central
+
+router_sube1 router_sube2 : router_scada  
+
+dns_pt dns_root : router_internet
+
+switch_datahistorian : router_central
+
+switch_servicos: router_central
+
+

@@ -1,6 +1,6 @@
 /etc/init.d/networking start
-#ip route add 10.20.64.224/27 via 10.20.64.99
-#ip route add 10.20.64.192/27 via 10.20.64.99
-#ip route add 10.20.64.160/27 via 10.20.64.99
-#ip route add 10.20.64.128/27 via 10.20.64.99
+ip route add 10.20.64.224/27 via 10.20.64.99
+ip route add 10.20.64.192/27 via 10.20.64.99
+ip route add 10.20.64.160/27 via 10.20.64.99
+ip route add 10.20.64.128/27 via 10.20.64.99
 

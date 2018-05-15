@@ -2,4 +2,14 @@ ip addr add dev eth0 10.20.64.45/27
 ip link set dev eth0 up
 ip route add 0.0.0.0/0 via 10.20.64.33
 
-etc/init.d/apache2 start
+a2enmod userdir
+/etc/init.d/apache2 start
+
+ 
+/etc/init.d/snmpd start
+
+#inicializacao protocolo ssh
+/etc/init.d/ssh start
+
+adduser admin
+

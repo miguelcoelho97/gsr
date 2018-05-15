@@ -10,4 +10,6 @@ ip link set dev eth2 up
 ip addr add dev eth3 169.254.0.2/30
 ip link set dev eth3 up
 
+ip route add 0.0.0.0/0 via 169.254.0.1
+
 

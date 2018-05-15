@@ -1,13 +1,14 @@
-$TTL   60000
-@               IN      SOA     dns_pt.pt.    root.dns_pt.pt. (
-                        2006031201 ; serial
-                        28800 ; refresh
-                        14400 ; retry
-                        3600000 ; expire
-                        0 ; negative cache ttl
-                        )
-@                   IN      NS      dns_pt.pt.
-dns_pt              IN      A       30.40.0.5
+$TTL 60000
+@   IN      SOA     dns_pt.pt.    root.dns_pt.pt. (
+    2006031201 ; serial
+    28 ; refresh
+    14400 ; retry
+    3600000 ; expire
+    15 ; negative cache ttl
+    )
 
-ici            IN      NS      dns.ici.pt.
-dns.ici     IN      A       10.20.64.35
+@                   IN      NS      dns_pt.pt.
+dns_pt		        IN      A       30.40.0.5
+
+@                   IN      NS      dns.ici.pt
+dns.ici.pt      	IN      A       10.20.64.35
